@@ -55,6 +55,9 @@ The second experiment aims to assess the performance of the trie variants when m
 
 ## Results
 The results from Experiment 1 show the trade-offs between time efficiency and memory usage among the trie types: 
-- TrieArraywhile quite fast, consumes the most memory
+
+<img width="809" alt="image" src="https://github.com/user-attachments/assets/66b31099-5dfe-4f0e-8cfb-093354e47bd3">
+
+- TrieArray: while quite fast, consumes the most memory
 - TrieList: very fast and least memory consuming
 - TrieBST: quite slow, but uses reasonable amount of memory
