@@ -55,9 +55,24 @@ The second experiment aims to assess the performance of the trie variants when m
 
 ## Results
 The results from Experiment 1 show the trade-offs between time efficiency and memory usage among the trie types: 
-
-<img width="809" alt="image" src="https://github.com/user-attachments/assets/66b31099-5dfe-4f0e-8cfb-093354e47bd3">
-
 - TrieArray: while quite fast, consumes the most memory
 - TrieList: very fast and least memory consuming
 - TrieBST: quite slow, but uses reasonable amount of memory
+
+<img width="809" alt="image" src="https://github.com/user-attachments/assets/66b31099-5dfe-4f0e-8cfb-093354e47bd3">
+
+The results of Experiment 2 underline the expected behaviour of tries even further. The total number of successful and unsuccessful search steps seem to strongly correlate. Here, the direct access to the children nodes of the List Trie outperforms the stucture of the Array and BST Trie, which can also be seen in the fast creation of the trie 5.
+
+<img width="701" alt="image" src="https://github.com/user-attachments/assets/1b2d6cfb-a9a9-490c-8402-46f01609ca83">
+<img width="658" alt="image" src="https://github.com/user-attachments/assets/edbc4683-9515-449c-90bf-a02b2a220cfb">
+
+However, the characteristic structure of the BST trie allows to need less nodes to store the words. The List and Array Trie need the same amount of nodes, but the Array Trie stores all the 27 pointers to children in each node, while the List Trie only stores pointers to children that actually exist. Therefore the Array Trie consumes far more memory.
+
+<img width="657" alt="image" src="https://github.com/user-attachments/assets/6ca35aad-6db4-4006-8c91-f09802c5c76d">
+<img width="606" alt="image" src="https://github.com/user-attachments/assets/68bd89b4-43d9-45d2-9597-6b304fce7131">
+<img width="630" alt="image" src="https://github.com/user-attachments/assets/c593e716-085c-4be4-adbc-493b3def0547">
+
+## Conclusion
+From our experiments, it is evident that each trie type offers advantages and compromises, making them suitable for specific scenarios in computational applications.
+The Array-Trie excels in providing fast access speeds, beneficial for applications where response time is critical and enough memory is available. Conversely, the List-Trie emerges as a more balanced option, providing a good compromise between speed and memory usage, making it ideal for moderately sized datasets where both metrics are of concern. The BST-Trie, with its low memory consumption, proves to be the most efficient in space utilization. This characteristic makes it suitable for memory-constrained environments, despite its slower performance.
+
